@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link to='/' className='linktag'>Home</Link>
           </li>
           <li>
-            <Link to='/transaction' className='linktag'>Transactions</Link>
+            <Link to='/transaction' className='linktag'>Add-Transactions</Link>
           </li>
           <li><Link to='/mytransactions' className='linktag'>My-Transactions</Link></li>
           <li>
