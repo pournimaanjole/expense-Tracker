@@ -10,7 +10,7 @@ const Transaction = () => {
       setUser(userFromLocatStroge);
     }else{
       alert("you are not loged in")
-      window.location.href='/'
+      window.location.href='/login'
     }
  
   },[])

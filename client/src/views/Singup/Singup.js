@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Singup.css'
+import Navbar from '../../componects/Navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 import axios from 'axios'
 
@@ -50,40 +52,52 @@ const Singup = () => {
         }
     },[])
   return (
-    <div>
+    <div className='singup-div'>
+<Navbar/>
+      <div  className='singup-container'> 
+
       
-      <div>
-        <label htmlFor='name'>Your Name: </label>
+      <div className='singup-page'>
+        <h1>Singup</h1>
+        <label htmlFor='name' className='label'>Your Name: </label>
         <input type='text'
         value={name}
         id='name'
          onChange={(e)=>{
 setName(e.target.value)
-        }} />
+        }} 
+        className='input-div' 
+        />
 
-        <label htmlFor='email'>Your Email: </label>
+        <label htmlFor='email' className='label'>Your Email: </label>
         <input type='text'
          value={email}
          id='email'
           onChange={(e)=>{
             setEmail(e.target.value)
-        }} />
+        }} 
+        className='input-div' 
+        />
 
-        <label htmlFor='password'>Enter Password:</label>
+        <label htmlFor='password' className='label'>Enter Password:</label>
         <input type='text' 
         value={password} 
         id='password' 
         onChange={(e)=>{
             setPassword(e.target.value)
-        }} />
+        }} 
+        className='input-div' 
+        />
 
-        <label htmlFor='phoneno'>Enter Mobile No: </label>
+        <label htmlFor='phoneno' className='label'>Enter Mobile No: </label>
         <input type='text'
         value={phoneNo} 
         id='phoneno' 
         onChange={(e) =>{
             setPhoneNo(e.target.value)
-        }} />
+        }} 
+        className='input-div' 
+        />
 
 <div>
 <input type='radio'
@@ -91,8 +105,9 @@ setName(e.target.value)
          id='male' 
          checked={gender=="male"}
          onClick={()=>{setgender("male")}}
+        
          />
-         <label htmlFor='male'>Male</label>
+         <label htmlFor='male' className='female' >Male</label>
 
          <input type='radio' 
          name='gender' 
@@ -100,15 +115,17 @@ setName(e.target.value)
          checked={gender=="female"}
 
          onClick={()=>{setgender("female")}}
-         
+         className='radio'
          />
-         <label htmlFor='female'>Female</label>
+         <label htmlFor='female' className='female' >Female</label>
 </div>
         
 
         
 
-         <button  type='button' onClick={Singup}>Signup</button>
+         <button  type='button' onClick={Singup} className='signup-btn'>Signup</button>
+         <span>already have an account? <Link  to='/login' className='link'>login</Link> </span>
+      </div>
       </div>
     </div>
   )

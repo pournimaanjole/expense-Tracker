@@ -5,6 +5,7 @@ import Transaction from './views/Transaction/Transaction'
 import Login from './views/Login/Login'
 import Home from './views/Home/Home';
 import Singup from './views/Singup/Singup';
+import Mytransaction from './views/Mytransaction/Mytransaction';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
     {
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
     {
         path:"/transaction" ,
         element:<Transaction/>
+    },{
+        path:'/mytransactions',
+        element:<Mytransaction/>
     }
 ])
 

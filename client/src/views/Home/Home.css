@@ -1,0 +1,40 @@
+.home-page{
+    background-image:  url(https://media.gettyimages.com/id/924367754/photo/income-tax-calculation.jpg?s=612x612&w=0&k=20&c=Nc0O32ixUwhdzXVtEZeKmUp2MvtHCDTBVz_zxxICUgk=);
+    
+    background-size: contain;
+    height: 100vh;
+   
+}
+.home-container{
+    background:  rgba(0, 0, 0, 0.658) ;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+.home-card{
+   
+    color: white;
+    height: 30rem;
+    width: 40rem;
+    /* border: 1px solid white; */
+    
+}
+.para{
+    font-size: 1.3rem;
+    font-weight: 500;
+   margin: 1rem;
+    padding: 0 3rem;
+    text-align: center;
+}
+.img-height{
+    height: 40rem;
+}
+.second-para{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.3rem 3rem;
+
+}

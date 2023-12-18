@@ -1,55 +1,70 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-
+import {Link} from 'react-router-dom'
+import './Login.css'
+import Navbar from '../../componects/Navbar/Navbar';
 const Login = () => {
-  const [email,setemail] = useState();
-  const [password,setPassword]= useState(); 
+  const [email, setemail] = useState();
+  const [password, setPassword] = useState();
 
-  const login = async()=>{
-    if(!email){
+  const login = async () => {
+    if (!email) {
       alert('email is required');
       return
     }
-    if(!password){
+    if (!password) {
       alert("password is required")
       return
     }
-    const response =  await axios.post('/api/v1/login',{
-      email:email,
-      password:password
-    })
-    alert(response?.data?.message);
-    if(response?.data?.sucess){
-      localStorage.setItem('login' , JSON.stringify(response?.data?.data));
-      Window.location.href='/'
+    try {
+      const response = await axios.post('/api/v1/login', {
+        email: email,
+        password: password
+      })
+      alert(response?.data?.message);
+      if (response?.data?.sucess === true) {
+        localStorage.setItem('login', JSON.stringify(response?.data?.data));
+        window.location.href = '/'
+      }
+    } catch (err) {
+      console.log(err.message)
     }
 
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const loadData = JSON.parse(localStorage.getItem('login' || '{}'))
-    if(loadData?.email){
+    if (loadData?.email) {
       alert('you are already loged in');
-      window.location.href='/'
+      window.location.href = '/'
     }
-  },[])
+  }, [])
   return (
-    <div>
-      <h1>login</h1>
-      <label htmlFor='email'>Enter Email: </label>
-      <input type='text' 
-      value={email}
-      onChange={(e)=>{setemail(e.target.value)}} 
-      id='email'
-      />
+    <div className='login-page'>
+      <Navbar/>
+      <div className='login-container'>
+      <div className='login-div'>
+        <h1>login</h1>
+        <label htmlFor='email' className='label'>Enter Email: </label>
+        <input type='text'
+          value={email}
+          onChange={(e) => { setemail(e.target.value) }}
+          id='email'
+          className='input-box'
+        />
 
-      <label htmlFor='password'>Enter Password:</label>
-      <input type='text' 
-      value={password}
-      onChange={(e)=>{setPassword(e.target.value)}} 
-      id='password' />
+        <label htmlFor='password' className='label'>Enter Password:</label>
+        <input type='text'
+          value={password}
+          onChange={(e) => { setPassword(e.target.value) }}
+          id='password' 
+          className='input-box'
+          />
 
-      <button type='button' onClick={login}>login</button>
+        <button type='button' onClick={login} className='btn'>login</button>
+        <span>don't have an account ?<Link to='/singup' className='link'>create a account</Link></span>
+      </div>
+      </div>
     </div>
   )
 }

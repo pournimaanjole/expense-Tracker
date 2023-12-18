@@ -1,0 +1,67 @@
+.singup-div{
+    background-image: url(https://media.gettyimages.com/id/924367754/photo/income-tax-calculation.jpg?s=612x612&w=0&k=20&c=Nc0O32ixUwhdzXVtEZeKmUp2MvtHCDTBVz_zxxICUgk=); 
+    
+    background-size: contain;
+  height: 130vh;
+
+}
+.singup-container{
+    background-color: white;
+   
+   width: 60vh;
+   box-shadow: 0 0 2px 3px whitesmoke ;
+  border-radius: 1rem;
+   margin: auto;
+   position: relative;
+   top: 7rem;
+   padding: 2.2rem;
+}
+.singup-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    color: salmon;
+}
+.input-div{
+    height: 2rem ;
+ margin-top: 0.2rem;
+ margin-bottom: 2rem;
+ font-size: 1.3rem;
+ border-radius: 0.3rem;
+ margin-top: 0.5rem;
+ margin-bottom: 2rem;
+ height: 2.5rem;
+
+}
+.signup-btn{
+    height: 3rem;
+    font-size: 1.3rem;
+    background-color: salmon;
+    border-radius: 0.3rem;
+    font-weight: 800;
+    border: none;
+    margin-bottom: 2rem;
+    margin-top: 1.3rem;
+
+}
+
+.label{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+span{
+    font-size: 1.2rem;
+}
+.link{
+    color: salmon;
+}
+.radio{
+    margin-left: 2rem;
+}
+.female{
+    margin-left: 0.2rem;
+}
