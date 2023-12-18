@@ -6,7 +6,7 @@ import path from 'path';
 
 const app = express();
 app.use(express.json())
-const PORT = process.env.PORT || 5000
+
 
 const __diname =path.resolve();
 
@@ -49,7 +49,7 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-
+const PORT = process.env.PORT || 5000
 app.listen(PORT , ()=>{
     console.log("server is on");
    
