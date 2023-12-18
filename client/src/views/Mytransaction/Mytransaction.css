@@ -1,0 +1,11 @@
+.left-div{
+    border: 1px solid white;
+    width: 40rem;
+    height: 30rem;
+    overflow-y: scroll;
+}
+.showing-card{
+    height: 3rem;
+    border: 1px solid white;
+    color: white;
+}

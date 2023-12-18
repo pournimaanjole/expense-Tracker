@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { json } from 'react-router-dom'
 import './Mytransaction.css'
 import axios from 'axios'
+import Navbar from '../../componects/Navbar/Navbar'
+import img2 from './../Home/money1.png'
 
 const Mytransaction = () => {
     const [user,setUser] = useState({})
@@ -27,8 +29,17 @@ const Mytransaction = () => {
         loadTransactions();
     },[])
   return (
-    <div>
-       {/* {
+    <div className='home-page'>
+        <Navbar/>
+        <div className='home-container'>
+<div className='right-div'>
+<img src={img2}  className='img-height'/>
+</div> 
+
+
+<div className='left-div'>
+    <div className='showing-card'>
+    {
         transactions?.map((data,index)=>{
             const {amount,discription,category,type,createdAt,updatedAt}= data
             return(<>
@@ -39,7 +50,13 @@ const Mytransaction = () => {
             </>)
 
         })
-      } */}
+      }
+    </div>
+ 
+</div>
+        
+      
+      </div>
     </div>
   )
 }

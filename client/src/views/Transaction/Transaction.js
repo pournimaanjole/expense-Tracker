@@ -39,6 +39,8 @@ const Transaction = () => {
       <Navbar />
 
 
+
+
       <div className='singup-container '>
         <div className='singup-page'>
           <h1>Add Transaction</h1>
@@ -95,8 +97,8 @@ const Transaction = () => {
         </div>
       </div>
 
-
-    </div>
+      </div>
+   
 
 
   )
