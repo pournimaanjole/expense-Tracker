@@ -14,6 +14,7 @@ import getHealthApi from './controlers/health.js';
 import { postTransactionApi,gettransactionsApi } from './controlers/transaction.js';
 import { userSignup ,userLogin} from './controlers/userSignup.js';
 import deleteApi from './controlers/delte.js';
+import updateApi  from './controlers/update.js';
 // mongodb connection 
 const connectToMONGODB = async ()=>{
 const connect = await mongoose.connect(process.env.MONGODB_URI);
@@ -38,6 +39,10 @@ app.get("/api/v1/transactions" , gettransactionsApi)
 // delete the transaction card
 
 app.delete('/api/v1/transactions/:_id', deleteApi)
+
+// update the transaction data
+ 
+app.put('/api/v1/transactions/:_id',updateApi )
 
 // signup post reqest
 
