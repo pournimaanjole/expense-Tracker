@@ -13,6 +13,7 @@ const __diname =path.resolve();
 import getHealthApi from './controlers/health.js';
 import { postTransactionApi,gettransactionsApi } from './controlers/transaction.js';
 import { userSignup ,userLogin} from './controlers/userSignup.js';
+import deleteApi from './controlers/delte.js';
 // mongodb connection 
 const connectToMONGODB = async ()=>{
 const connect = await mongoose.connect(process.env.MONGODB_URI);
@@ -34,12 +35,18 @@ app.post("/api/v1/transactions" ,postTransactionApi)
 
 app.get("/api/v1/transactions" , gettransactionsApi)
 
+// delete the transaction card
+
+app.delete('/api/v1/transactions/:_id', deleteApi)
+
 // signup post reqest
 
 app.post('/api/v1/signups' ,userSignup)
 // login post request 
 
 app.post('/api/v1/login' , userLogin)
+
+
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

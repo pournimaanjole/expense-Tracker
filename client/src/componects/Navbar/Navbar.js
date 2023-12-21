@@ -31,10 +31,11 @@ const Navbar = () => {
         </ul>
         <div>
           <span>Hello {user?.name || "User"}</span>
+
           <span>{user?.name ? <span onClick={() => {
-            localStorage.removeItem('/login')
+            localStorage.removeItem('login')
             window.location.href = '/login'
-          }}>Log out</span> : null}</span>
+          }} className='logout'>LogOut</span> : null}</span>
         </div>
 
       </div>

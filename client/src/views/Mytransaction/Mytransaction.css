@@ -1,11 +1,48 @@
 .left-div{
-    border: 1px solid white;
+    
     width: 40rem;
     height: 30rem;
     overflow-y: scroll;
 }
-.showing-card{
-    height: 3rem;
+
+
+.mytransaction{
     border: 1px solid white;
-    color: white;
+    margin: 1rem 1rem;
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+position: relative;
+}
+
+.type{
+    position: absolute;
+    top: 1rem;
+    right: 6rem;
+}
+.reason
+{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.amount{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.plus{
+   color: green;
+}
+.icon{
+    
+    display: flex;
+    justify-content: space-around;
+    width: 5rem;
+    margin-top: 2rem;
+  margin-left: 28rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  
+
 }
