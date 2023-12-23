@@ -39,7 +39,9 @@ if(response?.data?.sucess){
   loadTransactions();
 }
 }
+ const updatedata = (_id) =>{
 
+ }
  
 
   return (
@@ -73,7 +75,7 @@ if(response?.data?.sucess){
 
     <div className='icon'><div><span onClick={()=>{
       deletedata(_id);
-    }}><FontAwesomeIcon icon={faTrash} /></span></div><div><span><FontAwesomeIcon icon={faPenToSquare} /></span></div></div>
+    }}><FontAwesomeIcon icon={faTrash} /></span></div><div><span onClick={()=>{updatedata(_id)}}><FontAwesomeIcon icon={faPenToSquare} /></span></div></div>
                   </div>
                 </>)
 

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import './Navbar.css'
 const Navbar = () => {
   const [user, setUser] = useState({})
-  useEffect(() => {
-    const userFromLocatStroge = JSON.parse(localStorage.getItem('login' || "{}"))
-    setUser(userFromLocatStroge);
-  }, [])
+  // useEffect(() => {
+  //   const userFromLocatStroge = JSON.parse(localStorage.getItem('login' || "{}"))
+  //   setUser(userFromLocatStroge);
+  // }, [])
   return (
     <div>
       {/* navbar */}
